@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Backbone.js Web App</title>
+        <link rel="stylesheet" href="css/bootstrap.css" />
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+          <div class="navbar-inner">
+            <div class="container">
+              <span class="brand">Contact manager</span>
+            </div
+          </div>
+        </div>
+
+        <div id="main-region" class="container">
+          <p>Here is static content in the web page. You'll notice that it gets
+            replaced by our app as soon as we start it.
+          </p>
+        </div>
+        <script type="text/template" id="contact-list">
+          <thead>
+          <tr><th>First Name</th><th>Last Name</th></tr> </thead>
+          <tbody></tbody>
+        </script>
+        <script type="text/template" id="contact-list-template">
+          <td><%= firstName %></td><td><%= lastName %></td>
+        </script>
+
+        <script src="js/vendor/jquery.js"></script>
+        <script src="js/vendor/json2.js"></script>
+        <script src="js/vendor/underscore.js"></script>
+        <script src="js/vendor/backbone.js"></script>
+        <script src="js/vendor/backbone.marionette.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/entities/contact.js"></script>
+        <script src="js/apps/contacts/list_view.js"></script>
+        <script src="js/apps/contacts/list_controller.js"></script>
+        <script>
+          MyApp.start();
+        </script>
+    </body>
+</html>
